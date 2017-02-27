@@ -3,17 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Template</title>
+    <title>Banner Generator</title>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
-    $(function(){
-        
-    });
+        $(function() {
+
+            $('button').click(function() {
+                $('#banner').html($('#text').val());//Takes user's text and replace with h1(text on banner)
+                
+                var userBackground = $('#backgroundColor').val();
+                $('#banner').val(userBackground).css('background-color', userBackground);//set banner's color to user's color
+                
+                var userTextColor = $('#textColor').val();
+                $('#banner').val(userTextColor).css('color', userTextColor);
+            });
+            
+        });
     </script>
+    <style>
+        #banner {
+            background-color: white;
+            text-align: center;
+            height: 100px;
+            width: 400px;
+            font-size: 80px;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Create Your Own Banner</h1>
+    <div id="userInput">
+        Text on the banner:
+        <input id="text" />
+        <br><br> Background color:
+        <input type="color" id="backgroundColor" />
+        <br><br> Text color:
+        <input type="color" id="textColor" />
+        <br><br>
+        <button>Generate</button>
+        <br><br>
 
+    </div>
+
+    <h1 id="banner">text</h1>
 </body>
-
-</html>

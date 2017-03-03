@@ -18,11 +18,11 @@
                 $('#banner').val(userTextColor).css('color', userTextColor); //set banner's text color to user's input color
             });
 
-            $('#randomize').click(function(){
+            $('#randomize').click(function() {
                 var colors = Array("#ffcccc", "#ffd9cc", "#ffe6cc", "#ccffcc", "#ccffe6", "#ccccff", "#e6ccff", "#ffcccc", "#ff0000", "#ff8000", "#ffff00", "#40ff00", "#00ff40", "#00ff80", "#00ffff", "#0040ff", "#8000ff", "#ff00bf", "#ff0040", "#009999");
-                var randomColor = colors[Math.floor(Math.random() * colors.length)];//selects random color in array
-                $('#banner').val(randomColor).css('background-color', randomColor);//sets banner's background color to color randomly selected from array
-                
+                var randomColor = colors[Math.floor(Math.random() * colors.length)]; //selects random color in array
+                $('#banner').val(randomColor).css('background-color', randomColor); //sets banner's background color to color randomly selected from array
+
                 //$('#banner').html($('#text').val()); 
                 //$('#banner').val(randomColor).css('color', randomColor);
             });
@@ -59,25 +59,22 @@
 
 <body>
     <h1>Create Your Own Banner</h1>
-    
+
     <div id="userInput">
         Text on the banner:
         <input id="text" />
-        <br><br> 
-        Background color:
+        <br><br> Background color:
         <input type="color" id="backgroundColor" />
-        <br><br> 
-        Text color:
+        <br><br> Text color:
         <input type="color" id="textColor" />
         <br><br>
         <button id='generate'>Generate</button>
         <br><br>
         <hr>
-        <input type="radio" id="random" /> 
-        Random Background Color
+        <input type="radio" id="random" /> Random Background Color
         <br><br>
         <button id='randomize'>Randomize</button>
     </div>
 
-    <h1 id="banner">Text</h1>//banner
+    <h1 id="banner">Text</h1>
 </body>
